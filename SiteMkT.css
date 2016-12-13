@@ -1,0 +1,462 @@
+@font-face {
+    font-family: 'PoetsenOne-Regular';
+    src: url('fonts/PoetsenOne-Regular.ttf');
+}
+
+html {
+    overflow-y: scroll;
+}
+
+html,
+body {
+    margin: 0;
+    background: rgb(1, 150, 177);
+}
+
+
+/*  en-tete */
+
+#LogoMkT {
+    left: 10%;
+    position: fixed;
+    top: 2%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10%;
+    background: white;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav li {
+    margin-left: 2vw;
+}
+
+nav a {
+    font-size: 1.8vw;
+    color: black;
+    font-family: 'PoetsenOne-Regular';
+    text-decoration: none;
+    text-shadow: 4px 4px 10px black;
+    text-align: center;
+}
+
+nav a:active {
+    text-shadow: none;
+}
+
+#bouton {
+    position: fixed;
+    right: 2vw;
+    top: 1vw;
+    display: inline-block;
+    border: none;
+    color: white;
+    padding: 0.5vw 1vw;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1vw;
+    font-family: 'PoetsenOne-Regular';
+    cursor: pointer;
+    background: rgb(1, 150, 177);
+    box-shadow: none;
+}
+
+#bouton:hover {
+    box-shadow: 4px 4px 10px black;
+}
+
+#bouton:active {
+    box-shadow: none;
+}
+
+#dropdown {
+    position: fixed;
+    right: 2vw;
+    top: 1vw;
+}
+
+#dropdown #bouton1 {
+    border: none;
+    color: white;
+    padding: 0.5vw 1vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1vw;
+    font-family: 'PoetsenOne-Regular';
+    cursor: pointer;
+    background: rgb(1, 150, 177);
+    box-shadow: none;
+    height: 100%;
+    width: 100%;
+}
+
+#dropdown:hover {
+    box-shadow: 4px 0px 10px black;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    right: 0;
+}
+
+#dropdown:hover #dropdown-content {
+    display: block;
+    min-width: 100%;
+    font-family: 'PoetsenOne-Regular';
+    text-align: center;
+}
+
+#dropdown-content #dp1 {
+    display: block;
+    padding: 5px;
+    border: solid 1px black;
+    text-decoration: none;
+    color: black;
+    box-shadow: 4px 0px 10px black;
+}
+
+#dropdown-content form {
+    display: block;
+}
+
+#dp2 {
+    border: solid 1px black;
+    box-shadow: 4px 1px 10px black;
+    background: white;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    font-family: 'PoetsenOne-Regular';
+    cursor: pointer;
+    padding: 5px;
+    font-size: 100%;
+}
+
+#dropdown-content #dp1:hover {
+    box-shadow: none;
+    background-color: rgb(210, 210, 210);
+}
+
+#dp2:hover {
+    box-shadow: none;
+    background-color: rgb(210, 210, 210);
+}
+
+
+/*  index.html */
+
+#conteneur2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#conteneur2 a {
+    margin-top: 70px;
+}
+
+
+/*  pied de page */
+
+#bandefooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 10%;
+    background: white;
+}
+
+#bandefooter p {
+    font-size: 2em;
+    color: black;
+    font-family: 'PoetsenOne-Regular';
+    text-decoration: none;
+    text-shadow: 4px 4px 10px black;
+}
+
+#jinx1 img {
+    position: fixed;
+    bottom: 9%;
+    left: 0;
+}
+
+#jinx2 img {
+    position: fixed;
+    top: 91%;
+    left: 0;
+}
+
+
+/* formulaire */
+
+#inscription {
+    margin-top: 13%;
+    text-align: center;
+    font-family: 'PoetsenOne-Regular';
+}
+
+#submitform {
+    font-family: 'PoetsenOne-Regular';
+    background: white;
+    border: none;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    color: rgb(1, 150, 177);
+}
+
+#submitform:hover {
+    box-shadow: 4px 4px 10px black;
+}
+
+#submitform:active {
+    box-shadow: none;
+}
+
+form .remplir {
+    color: red;
+    font-size: 1.4em;
+    text-shadow: 4px 4px 10px black;
+}
+
+form #pseudo {
+    font-size: 1.1em;
+    color: red;
+    text-shadow: 4px 4px 10px black;
+}
+
+
+/* page de connection*/
+
+#pageconnection {
+    display: flex;
+    justify-content: center;
+    font-family: 'PoetsenOne-Regular';
+    font-size: 1.7em;
+    margin-top: 18%;
+    align-items: center;
+}
+
+#block1 {
+    text-align: center;
+    border: 3px solid white;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 4px 4px 10px black;
+}
+
+#connexionform {
+    font-family: 'PoetsenOne-Regular';
+    background: white;
+    border: none;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    color: rgb(1, 150, 177);
+}
+
+#connexionform:hover {
+    box-shadow: 4px 4px 10px black;
+}
+
+#connexionform:active {
+    box-shadow: none;
+}
+
+#block2 {
+    margin-left: 100px;
+    text-align: center;
+    border: 3px solid white;
+    padding-left: 30px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-right: 30px;
+    box-shadow: 4px 4px 10px black;
+}
+
+#pageconnection button {
+    border: none;
+    color: rgb(1, 150, 177);
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'PoetsenOne-Regular';
+    cursor: pointer;
+    background: white;
+    box-shadow: none;
+}
+
+#pageconnection button:hover {
+    box-shadow: 4px 4px 10px black;
+}
+
+#pageconnection button:active {
+    box-shadow: none;
+}
+
+
+/* page vidéo*/
+
+#video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+#video div {
+    margin-top: 100px;
+    font-family: 'PoetsenOne-Regular';
+    font-size: 1.6em;
+}
+
+#video iframe {
+    box-shadow: 6px 6px 12px black;
+}
+
+#video p {
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 10px black;
+}
+
+
+/* bienvenue*/
+
+#bienvenue {
+    font-family: 'PoetsenOne-Regular';
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20%;
+    color: white;
+    text-shadow: 4px 4px 10px black;
+}
+
+
+/*page de deconnexion*/
+
+#deconnexionsuccess {
+    font-family: 'PoetsenOne-Regular';
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20%;
+    color: white;
+    text-shadow: 4px 4px 10px black;
+}
+
+
+/*chat*/
+
+#thechat {}
+
+#openclose {
+    position: fixed;
+    right: 1%;
+    top: 92%;
+    z-index: 1;
+    background: rgb(1, 150, 177);
+    border: none;
+    margin: 0;
+    color: white;
+    font-family: 'PoetsenOne-Regular';
+    padding: 4px 8px;
+}
+
+#openclose:hover {
+    box-shadow: 4px 4px 10px black;
+}
+
+#openclose:active {
+    box-shadow: none;
+}
+
+#lechat {
+    position: fixed;
+    right: 0;
+    bottom: 10%;
+    height: 50%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -4px -4px 10px black;
+}
+
+#inputchat {
+    display: flex;
+    width: 100%;
+    height: 15%;
+}
+
+#txtArea {
+    width: 85%;
+    height: auto;
+}
+
+#envoimessage {
+    width: 20%;
+    height: auto;
+    background: white;
+    font-family: 'PoetsenOne-Regular';
+}
+
+#refresh {
+    margin-left: 3px;
+    background: white;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 10px;
+}
+
+#messagechat {
+    background: white;
+    height: 85%;
+    overflow-y: scroll;
+}
+
+#messagechat strong {
+    font-family: 'PoetsenOne-Regular';
+    color: rgb(1, 150, 177);
+}
+
+#messagechat div {
+    margin-bottom: 3px;
+}
+
+
+/*deja connecter */
+
+#dejaconnecter {
+    font-family: 'PoetsenOne-Regular';
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20%;
+    color: white;
+    text-shadow: 4px 4px 10px black;
+}
