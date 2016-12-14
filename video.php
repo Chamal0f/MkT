@@ -1,4 +1,4 @@
-	<?php include('connexionbdd.php'); ?>
+	<?php include_once('connexionbdd.php'); ?>
 	<?php session_start(); ?>
 
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
  
     <body>
 		
-	<?php include("header.php"); ?>	
+	<?php include_once("header.php"); ?>
 	
 	
 	<div id="video">
@@ -41,8 +41,8 @@
 	
 	</div>
 		
-	<?php include("footer.php"); ?>
-<?php if(isset($_SESSION['pseudo'])){ include("chat.php");} ?>
+	<?php include_once("footer.php"); ?>
+<?php if(isset($_SESSION['pseudo'])){ include_once("chat.php");} ?>
 	
 	</body>
 </html>

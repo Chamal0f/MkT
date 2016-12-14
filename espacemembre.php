@@ -1,4 +1,4 @@
-<?php include('connexionbdd.php'); ?>
+<?php include_once('connexionbdd.php'); ?>
     <?php session_start(); ?>
         <!DOCTYPE html>
         <html>
@@ -12,11 +12,11 @@
 
         <body>
           
-            <?php include('header.php'); ?>
+            <?php include_once('header.php'); ?>
            
-         <?php include("footer.php"); ?>
+         <?php include_once("footer.php"); ?>
               
-          <?php if(isset($_SESSION['pseudo'])){ include("chat.php");} ?>
+          <?php if(isset($_SESSION['pseudo'])){ include_once("chat.php");} ?>
        
                   
         </body>

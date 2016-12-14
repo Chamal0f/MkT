@@ -1,37 +1,31 @@
-<?php include('connexionbdd.php'); ?>
-	
+<?php include_once('connexionbdd.php'); ?>
+
 	<?php session_start(); ?>
 	
 	
-	<?php 	$requettenombre=$bdd->query('SELECT COUNT(pseudo) FROM membre');
+	<?php 	$requettenombre= db::query('SELECT COUNT(pseudo) FROM membre');
 			$nombre=$requettenombre->fetch(PDO::FETCH_OBJ);
-			
-		
-	
-	?>
+    ?>
 	
 	
 	<?php
 	if($_SERVER['REQUEST_METHOD'] == 'POST') { 
 	
-		$arraypseudo = $bdd->prepare('SELECT pseudo FROM membre');
-		$arraypseudo ->execute(); 
+		$arraypseudo = db::query('SELECT pseudo FROM membre');
 		$result=$arraypseudo -> fetchAll(PDO::FETCH_COLUMN, 0);
 		
 		
 		
-		$requette =$bdd->prepare("INSERT INTO membre(nom, prenom, pseudo, mail, mot_de_passe) VALUES('".$_POST["name"]."','".$_POST["prenom"]."','".$_POST["pseudo"]."','".$_POST["mail"]."','".sha1($_POST["password"])."')");
-	
-		if( $_POST["password"] != $_POST["password2"] OR in_array($_POST["pseudo"],$result)){}
-		else { $requette-> execute();
-				
-				
-		}
-		$requettenombre2=$bdd->query('SELECT COUNT(pseudo) FROM membre');
+
+		if( $_POST["password"] == $_POST["password2"] AND !in_array($_POST["pseudo"],$result)){
+		    $requette = db::query("INSERT INTO membre(nom, prenom, pseudo, mail, mot_de_passe) VALUES('".$_POST["name"]."','".$_POST["prenom"]."','".$_POST["pseudo"]."','".$_POST["mail"]."','".sha1($_POST["password"])."')");
+        }
+
+		$requettenombre2 = db::query('SELECT COUNT(pseudo) FROM membre');
 		$nombre2=$requettenombre2->fetch(PDO::FETCH_OBJ);
 		
 		if($nombre != $nombre2) { 
-		header('location: http://localhost/Site/MkT/bienvenue.php');}
+		header('location: /bienvenue.php');}
 		
 		
 		
@@ -51,7 +45,7 @@
 
 	
 	
-	<?php include("header.php"); ?>
+	<?php include_once("header.php"); ?>
 	
 	
 	
@@ -85,7 +79,7 @@
 
 	
 	
-	<?php include("footer.php"); ?>
+	<?php include_once("footer.php"); ?>
 	
 </body>
 </html>

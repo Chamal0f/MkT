@@ -2,7 +2,7 @@
 <div id="lechat" style='display:<?php if (isset($_COOKIE["lechat"]))
 { echo $_COOKIE["lechat"];}else{echo "block";} ?>'>
     <div id="messagechat">
-        <?php include('mess.php'); ?>
+        <?php include_once('mess.php'); ?>
     </div>
     <div id="inputchat">
         <textarea name="message" id="txtArea"></textarea>

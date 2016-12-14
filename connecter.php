@@ -1,9 +1,9 @@
-<?php include('connexionbdd.php'); ?>
+<?php include_once('connexionbdd.php');?>
 	
 	<?php session_start(); ?>
     
     <?php if(isset($_SESSION['pseudo'])){
-    header('location: dejaconnecter.php');
+    header('location: /dejaconnecter.php');
 } ?>
 	
 	<?php if($_SERVER['REQUEST_METHOD'] == 'POST') { 
@@ -11,27 +11,23 @@
 	$pseudo = $_POST['pseudo'];
 	$password= sha1($_POST['password']);
     
-	
-	$idconnection = $bdd->prepare('SELECT pseudo,mot_de_passe FROM membre WHERE pseudo = :pseudo AND mot_de_passe = :password');
-	$idconnection ->execute(array(
-		'pseudo'=> $pseudo,
-		'password' => $password )); 
-	
+
+	$idconnection = db::query('SELECT pseudo,mot_de_passe FROM membre WHERE pseudo = ? AND mot_de_passe = ?', $pseudo, $password);
+
 	$result=$idconnection -> fetch(); 
 	
 	
 	
 		
-		if (!$result ) {
-		}else{
+		if ($result ){
 			session_start();
 			$_SESSION['pseudo']=$pseudo;
           
-			header('location: http://localhost/Site/MkT/index.php');
+			header('location: /index.php');
            
 			
-		};
-	
+		}
+
 	}
 	
 	?>
@@ -48,7 +44,7 @@
 		
 	
 	 
-	<?php include('header.php') ?>
+	<?php include_once('header.php') ?>
 		
 		
 	
@@ -72,7 +68,7 @@
 	</div>
 	
 	
-		<?php include('footer.php'); ?>
-	<?php if(isset($_SESSION['pseudo'])){ include("chat.php");} ?>
+		<?php include_once('footer.php'); ?>
+	<?php if(isset($_SESSION['pseudo'])){ include_once("chat.php");} ?>
 	</body>
 </html>
