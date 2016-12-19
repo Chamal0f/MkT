@@ -6,9 +6,10 @@
             <form enctype="multipart/form-data">
                 <input type="file" name="file1" id="file1" /> </form>
             <div id="blockactu">
-                <div id="fondfilactu">
-                    <div id="filactu"> <?php include("post_filactu.php");?> </div>
+                
+                    <div id="filactu"> <?php include("post_filactu.php");?> 
                 </div>
+                
                 <div id="inputcontent">
                     <textarea id="txtrea"></textarea>
                     <div id="sendbox">

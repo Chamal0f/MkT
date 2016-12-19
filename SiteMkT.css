@@ -405,6 +405,7 @@ form #pseudo {
     padding: 0.4vw 0.8vw;
     z-index: 11;
     font-size:0.8vw;
+    cursor: pointer;
 }
 
 #openclose:hover {
@@ -500,6 +501,9 @@ form #pseudo {
     width:38vw;
     
     
+    background:white;
+    
+    
     
     
 }
@@ -556,58 +560,124 @@ form #pseudo {
     border:none;
     background:rgb(1, 150, 177) ; 
     color:white;
+    cursor: pointer;
     
 }
-#inputcontent div input{
-     display:none;
-    
-}
-#fondfilactu{
-   
-    width:38vw;
-    height: 33vw;
-    background:white;
-   
-   
-}
+
+
 #filactu{
     width:31vw;
     height: 31vw;
     background:rgb(230,230,230);
     margin-top: 1vw;
     margin-left:3.6vw;
-    
-    
-    
+    display: flex;
+    flex-direction: column;
+   
     overflow-y: scroll;
      border: 0.15vw solid rgb(1, 150, 177);
     
 }
 
-#postfilactu{
+.postfilactu{
+  
+    text-align: center;
+    margin:1vw;
+    background: rgb(240,240,240);
+    padding-bottom: 1vw;
+    border: 0.11vw solid black;
+        
     
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-   
-    
+ 
     
 }
 
 
-#postfilactu strong{
-     font-family: 'PoetsenOne-Regular';
+.postfilactu strong{
+    font-family: 'PoetsenOne-Regular';
     color: rgb(1, 150, 177);
-    margin-top: 1vw;
     
-}
-#postfilactu img {
-    width:27vw;
     
-}
-#postfilactu video {
-    width:27vw;
+    
+    
     
 }
 
+.postfilactu img {
+    width:27vw;
+    margin: auto;
+   
+}
+.postfilactu video {
+    width:27vw;
+    margin:auto;
+    
+    
+}
+
+.postfilactu audio {
+    width:27vw;
+    margin:auto;
+    
+}
+.likecomment{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+   
+}
+.likecomment button{
+    margin-left: 1vw;
+    
+    color: white;
+    text-decoration: none;
+    font-size: 0.7vw;
+    cursor: pointer;
+    background: rgb(1, 150, 177);
+    box-shadow: none;
+    font-family: 'PoetsenOne-Regular';
+    padding: 0.2vw 0.4vw;
+    border:0.1vw solid rgb(1, 150, 177);
+    
+}
+
+.likecomment span{
+    margin-left: 1vw;
+    font-size: 0.7vw;
+    font-family: 'PoetsenOne-Regular';
+    
+    
+}
+
+.likecomment button:hover{
+    background: white;
+    border:0.1vw solid rgb(1, 150, 177);
+    color:rgb(1, 150, 177);
+    
+}
+
+.modifsupp{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.modifsupp button{
+    color: white;
+    text-decoration: none;
+    font-size: 0.7vw;
+    cursor: pointer;
+    background: rgb(1, 150, 177);
+    box-shadow: none;
+    font-family: 'PoetsenOne-Regular';
+    padding: 0.2vw 0.4vw;
+    border:0.1vw solid rgb(1, 150, 177);
+}
+
+.modifsupp button:hover{
+    background: white;
+    border:0.1vw solid rgb(1, 150, 177);
+    color:rgb(1, 150, 177);
+}
