@@ -11,9 +11,9 @@
                 <li> <a href="#"> Contact </a> </li>
             </ul>
         </nav>
-        <div id="LogoMkT">
-            <a href="index.php"> <img src="pics/logorougef.png" onmouseover="this.src='pics/logoblancf.png'" onmouseout="this.src='pics/logorougef.png'" alt="logo MkT" /> </a>
-        </div>
+      
+            <a href="index.php"> <img id="LogoMkT" src="pics/logorougef.png" onmouseover="this.src='pics/logoblancf.png'" onmouseout="this.src='pics/logorougef.png'" alt="logo MkT" /> </a>
+    
         <?php if(isset($_SESSION['pseudo'])){
 		echo '<div id="dropdown">
 		<button type="button" id="bouton1" >',htmlspecialchars($_SESSION["pseudo"]),'

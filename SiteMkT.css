@@ -5,6 +5,7 @@
 
 html {
     overflow-y: scroll;
+    
 }
 
 html,
@@ -17,10 +18,18 @@ body {
 /*  en-tete */
 
 #LogoMkT {
-    left: 10%;
+    left: 10vw;
     position: fixed;
-    top: 2%;
+    bottom: 44.5vw;
+    z-index: 11;
+    height: 4.55vw;
+    width: 4.55;
+    
+   
 }
+
+    
+
 
 nav {
     display: flex;
@@ -30,8 +39,10 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    height: 10%;
+    height: 5vw;
     background: white;
+    z-index: 10;
+    width:100vw;
 }
 
 nav ul {
@@ -48,7 +59,7 @@ nav a {
     color: black;
     font-family: 'PoetsenOne-Regular';
     text-decoration: none;
-    text-shadow: 4px 4px 10px black;
+    text-shadow: 0.2vw 0.2vw 0.8vw black;
     text-align: center;
 }
 
@@ -71,6 +82,7 @@ nav a:active {
     cursor: pointer;
     background: rgb(1, 150, 177);
     box-shadow: none;
+    z-index: 11;
 }
 
 #bouton:hover {
@@ -85,6 +97,7 @@ nav a:active {
     position: fixed;
     right: 2vw;
     top: 1vw;
+    z-index: 11;
 }
 
 #dropdown #bouton1 {
@@ -182,12 +195,13 @@ nav a:active {
     bottom: 0;
     right: 0;
     left: 0;
-    height: 10%;
+    height: 5vw;
     background: white;
+    z-index: 10;
 }
 
 #bandefooter p {
-    font-size: 2em;
+    font-size: 1.8vw;
     color: black;
     font-family: 'PoetsenOne-Regular';
     text-decoration: none;
@@ -198,12 +212,14 @@ nav a:active {
     position: fixed;
     bottom: 9%;
     left: 0;
+    z-index: 11;
 }
 
 #jinx2 img {
     position: fixed;
     top: 91%;
     left: 0;
+    z-index: 11;
 }
 
 
@@ -374,19 +390,21 @@ form #pseudo {
 
 /*chat*/
 
-#thechat {}
+
 
 #openclose {
     position: fixed;
-    right: 1%;
-    top: 92%;
+    right: 1vw;
+    bottom: 2vw;
     z-index: 1;
     background: rgb(1, 150, 177);
     border: none;
     margin: 0;
     color: white;
     font-family: 'PoetsenOne-Regular';
-    padding: 4px 8px;
+    padding: 0.4vw 0.8vw;
+    z-index: 11;
+    font-size:0.8vw;
 }
 
 #openclose:hover {
@@ -406,6 +424,7 @@ form #pseudo {
     display: flex;
     flex-direction: column;
     box-shadow: -4px -4px 10px black;
+    z-index: 11;
 }
 
 #inputchat {
@@ -417,6 +436,7 @@ form #pseudo {
 #txtArea {
     width: 85%;
     height: auto;
+    resize: none;
 }
 
 #envoimessage {
@@ -460,3 +480,134 @@ form #pseudo {
     color: white;
     text-shadow: 4px 4px 10px black;
 }
+
+
+/*espacemembre*/
+
+#blockactu{
+    display:flex;
+    flex-direction: column;
+    position:fixed;
+    bottom:5.5vw;
+    top:5.5vw;
+    left:31vw;
+    border: 0.1vw solid black;
+    height:38.3vw;
+    z-index: 1;
+    box-shadow: 0vw 0vw 10vw black;
+    justify-content: center;
+    background: rgb(230,230,230);
+    width:38vw;
+    
+    
+    
+    
+}
+
+
+#inputcontent{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 38vw;
+    height: 6vw;
+    justify-content:center;
+    background: white;
+   
+   
+    
+    
+    
+}
+
+#txtrea{
+    width:25vw;
+    height: 3vw;
+    resize: none;
+    margin-right: 0.5vw;
+    border: 0.15vw solid rgb(1, 150, 177);
+    background:rgb(230,230,230);
+}
+
+#inputcontent #sendbox{
+    display:flex;
+    flex-direction: column;
+    width: 5vw;
+    height: 3vw;
+    justify-content: space-between;
+    
+
+}
+#inputcontent  button{
+    
+    width: 5vw;
+    height: 1.25vw;
+    background: white;
+    font-family: 'PoetsenOne-Regular';
+    font-size: 0.8vw;
+    border:0.15vw solid rgb(1, 150, 177);
+    color:rgb(1, 150, 177);
+    margin-left: 0.5vw;
+    
+    
+}
+#inputcontent div button:hover{
+    border:none;
+    background:rgb(1, 150, 177) ; 
+    color:white;
+    
+}
+#inputcontent div input{
+     display:none;
+    
+}
+#fondfilactu{
+   
+    width:38vw;
+    height: 33vw;
+    background:white;
+   
+   
+}
+#filactu{
+    width:31vw;
+    height: 31vw;
+    background:rgb(230,230,230);
+    margin-top: 1vw;
+    margin-left:3.6vw;
+    
+    
+    
+    overflow-y: scroll;
+     border: 0.15vw solid rgb(1, 150, 177);
+    
+}
+
+#postfilactu{
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    
+    
+}
+
+
+#postfilactu strong{
+     font-family: 'PoetsenOne-Regular';
+    color: rgb(1, 150, 177);
+    margin-top: 1vw;
+    
+}
+#postfilactu img {
+    width:27vw;
+    
+}
+#postfilactu video {
+    width:27vw;
+    
+}
+

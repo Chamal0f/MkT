@@ -12,12 +12,12 @@
 
         <body>
           
-            <?php include('header.php'); ?>
-           
+            
+          <?php include ("header.php");?>
          <?php include("footer.php"); ?>
-              
+             
           <?php if(isset($_SESSION['pseudo'])){ include("chat.php");} ?>
-       
+        <?php include('filactualite.php'); ?>
                   
         </body>
 

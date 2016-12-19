@@ -1,3 +1,4 @@
+
 <button type="button" id="openclose" onclick="javascript:showhide('lechat');"> messagerie </button>
 <div id="lechat" style='display:<?php if (isset($_COOKIE["lechat"]))
 { echo $_COOKIE["lechat"];}else{echo "block";} ?>'>
@@ -5,7 +6,7 @@
         <?php include('mess.php'); ?>
     </div>
     <div id="inputchat">
-        <textarea name="message" id="txtArea"></textarea>
+        <textarea  id="txtArea"></textarea>
         <button name="submit" type="submit" id="envoimessage" onclick="javascript:ajax_post();autoscrolldown('messagechat');clearelement('txtArea');"> Envoyer </button>
     </div>
 </div>
@@ -15,11 +16,11 @@
         var url = "recupajaxchat.php";
         var mess = document.getElementById("txtArea").value;
         var vars = "message=" + mess;
-        xhr.open("POST", url, false);
+        xhr.open("POST", url, true);
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
-                console.log('OK');
+                console.log('OK'); 
             }
         }
         xhr.send(vars);

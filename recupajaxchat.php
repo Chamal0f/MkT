@@ -3,7 +3,7 @@
 	
     session_start();
      
-    $message= addslashes($_POST['message']);
+    $message= addslashes($_POST['message']); 
 
     if(!empty($message)) {$req1= $bdd -> prepare('SELECT pseudo,message FROM minichat ORDER BY id DESC LIMIT 0, 50');
     $req1->execute();

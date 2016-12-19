@@ -31,7 +31,7 @@
 		$nombre2=$requettenombre2->fetch(PDO::FETCH_OBJ);
 		
 		if($nombre != $nombre2) { 
-		header('location: http://localhost/Site/MkT/bienvenue.php');}
+		header('location: bienvenue.php');}
 		
 		
 		

@@ -27,7 +27,7 @@
 			session_start();
 			$_SESSION['pseudo']=$pseudo;
           
-			header('location: http://localhost/Site/MkT/index.php');
+			header('location: index.php');
            
 			
 		};
@@ -54,7 +54,7 @@
 	
 	<div id="pageconnection"  >
 		<div id="block1">
-			<p> Déjà menbre ? </p>
+			<p> Déjà membre ? </p>
 			<form id="connect" action="connecter.php" method="post">
 			  Pseudo : <input type="text" name="pseudo" required > </br></br>
 			Password: <input type="password" name="password" 
