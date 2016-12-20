@@ -575,6 +575,7 @@ form #pseudo {
     flex-direction: column;
    
     overflow-y: scroll;
+    scroll-behavior:smooth;
      border: 0.15vw solid rgb(1, 150, 177);
     
 }

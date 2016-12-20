@@ -5,9 +5,23 @@
   
             <form enctype="multipart/form-data">
                 <input type="file" name="file1" id="file1" /> </form>
+            
+            
             <div id="blockactu">
                 
-                    <div id="filactu"> <?php include("post_filactu.php");?> 
+                    <div id="filactu" onscroll="javascript:scroll_down_show_post();" >
+                <?php   $x=1;
+                        $grp_post= ($_COOKIE["compteur_post"])/5;
+                        while($x-1 <= $grp_post ){
+                        echo    "<div id='grpfilactu".$x."' ></div>";
+                            $x++;
+                            
+                            
+                        }       
+                        
+                        
+                        ?>
+                        
                 </div>
                 
                 <div id="inputcontent">
@@ -38,3 +52,27 @@
                 
             }
         </script>
+<script language="javascript" type="text/javascript" src="cookie.js"></script>
+<script language="javascript" type="text/javascript" src="show_post.js"></script>
+<script language="javascript" type="text/javascript">
+function scroll_down_show_post(){
+    if(i < getCookie("compteur_post")){
+    if(filactu.scrollHeight - filactu.scrollTop === filactu.clientHeight){
+     show_post(); 
+         console.log(getCookie("compteur_post"));
+        
+    
+   
+        
+    
+    
+        
+    }
+}
+}
+
+</script>
+
+
+
+
