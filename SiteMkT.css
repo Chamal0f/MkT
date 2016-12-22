@@ -5,7 +5,6 @@
 
 html {
     overflow-y: scroll;
-    
 }
 
 html,
@@ -24,12 +23,7 @@ body {
     z-index: 11;
     height: 4.55vw;
     width: 4.55;
-    
-   
 }
-
-    
-
 
 nav {
     display: flex;
@@ -42,7 +36,7 @@ nav {
     height: 5vw;
     background: white;
     z-index: 10;
-    width:100vw;
+    width: 100vw;
 }
 
 nav ul {
@@ -390,8 +384,6 @@ form #pseudo {
 
 /*chat*/
 
-
-
 #openclose {
     position: fixed;
     right: 1vw;
@@ -404,7 +396,7 @@ form #pseudo {
     font-family: 'PoetsenOne-Regular';
     padding: 0.4vw 0.8vw;
     z-index: 11;
-    font-size:0.8vw;
+    font-size: 0.8vw;
     cursor: pointer;
 }
 
@@ -485,153 +477,118 @@ form #pseudo {
 
 /*espacemembre*/
 
-#blockactu{
-    display:flex;
+#blockactu {
+    display: flex;
     flex-direction: column;
-    position:fixed;
-    bottom:5.5vw;
-    top:5.5vw;
-    left:31vw;
+    position: fixed;
+    bottom: 5.5vw;
+    top: 5.5vw;
+    left: 31vw;
     border: 0.1vw solid black;
-    height:38.3vw;
+    height: 38.3vw;
     z-index: 1;
     box-shadow: 0vw 0vw 10vw black;
     justify-content: center;
-    background: rgb(230,230,230);
-    width:38vw;
-    
-    
-    background:white;
-    
-    
-    
-    
+    background: rgb(230, 230, 230);
+    width: 38vw;
+    background: white;
 }
 
-
-#inputcontent{
-    
+#inputcontent {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 38vw;
     height: 6vw;
-    justify-content:center;
+    justify-content: center;
     background: white;
-   
-   
-    
-    
-    
 }
 
-#txtrea{
-    width:25vw;
+#txtrea {
+    width: 25vw;
     height: 3vw;
     resize: none;
     margin-right: 0.5vw;
     border: 0.15vw solid rgb(1, 150, 177);
-    background:rgb(230,230,230);
+    background: rgb(230, 230, 230);
 }
 
-#inputcontent #sendbox{
-    display:flex;
+#inputcontent #sendbox {
+    display: flex;
     flex-direction: column;
     width: 5vw;
     height: 3vw;
     justify-content: space-between;
-    
-
 }
-#inputcontent  button{
-    
+
+#inputcontent button {
     width: 5vw;
     height: 1.25vw;
     background: white;
     font-family: 'PoetsenOne-Regular';
     font-size: 0.8vw;
-    border:0.15vw solid rgb(1, 150, 177);
-    color:rgb(1, 150, 177);
+    border: 0.15vw solid rgb(1, 150, 177);
+    color: rgb(1, 150, 177);
     margin-left: 0.5vw;
-    
-    
 }
-#inputcontent div button:hover{
-    border:none;
-    background:rgb(1, 150, 177) ; 
-    color:white;
+
+#inputcontent div button:hover {
+    border: none;
+    background: rgb(1, 150, 177);
+    color: white;
     cursor: pointer;
-    
 }
 
-
-#filactu{
-    width:31vw;
+#filactu {
+    width: 31vw;
     height: 31vw;
-    background:rgb(230,230,230);
+    background: rgb(230, 230, 230);
     margin-top: 1vw;
-    margin-left:3.6vw;
+    margin-left: 3.6vw;
     display: flex;
     flex-direction: column;
-   
     overflow-y: scroll;
-    scroll-behavior:smooth;
-     border: 0.15vw solid rgb(1, 150, 177);
-    
+    scroll-behavior: smooth;
+    border: 0.15vw solid rgb(1, 150, 177);
 }
 
-.postfilactu{
-  
+.postfilactu {
     text-align: center;
-    margin:1vw;
-    background: rgb(240,240,240);
+    margin: 1vw;
+    background: rgb(240, 240, 240);
     padding-bottom: 1vw;
     border: 0.11vw solid black;
-        
-    
- 
-    
 }
 
-
-.postfilactu strong{
+.postfilactu strong {
     font-family: 'PoetsenOne-Regular';
     color: rgb(1, 150, 177);
-    
-    
-    
-    
-    
 }
 
 .postfilactu img {
-    width:27vw;
+    width: 27vw;
     margin: auto;
-   
 }
+
 .postfilactu video {
-    width:27vw;
-    margin:auto;
-    
-    
+    width: 27vw;
+    margin: auto;
 }
 
 .postfilactu audio {
-    width:27vw;
-    margin:auto;
-    
+    width: 27vw;
+    margin: auto;
 }
-.likecomment{
+
+.likecomment {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    
-   
 }
-.likecomment button{
+
+.likecomment button {
     margin-left: 1vw;
-    
     color: white;
     text-decoration: none;
     font-size: 0.7vw;
@@ -640,32 +597,28 @@ form #pseudo {
     box-shadow: none;
     font-family: 'PoetsenOne-Regular';
     padding: 0.2vw 0.4vw;
-    border:0.1vw solid rgb(1, 150, 177);
-    
+    border: 0.1vw solid rgb(1, 150, 177);
 }
 
-.likecomment span{
+.likecomment span {
     margin-left: 1vw;
     font-size: 0.7vw;
     font-family: 'PoetsenOne-Regular';
-    
-    
 }
 
-.likecomment button:hover{
+.likecomment button:hover {
     background: white;
-    border:0.1vw solid rgb(1, 150, 177);
-    color:rgb(1, 150, 177);
-    
+    border: 0.1vw solid rgb(1, 150, 177);
+    color: rgb(1, 150, 177);
 }
 
-.modifsupp{
+.modifsupp {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
 }
 
-.modifsupp button{
+.modifsupp button {
     color: white;
     text-decoration: none;
     font-size: 0.7vw;
@@ -674,11 +627,68 @@ form #pseudo {
     box-shadow: none;
     font-family: 'PoetsenOne-Regular';
     padding: 0.2vw 0.4vw;
-    border:0.1vw solid rgb(1, 150, 177);
+    border: 0.1vw solid rgb(1, 150, 177);
 }
 
-.modifsupp button:hover{
+.modifsupp button:hover {
     background: white;
-    border:0.1vw solid rgb(1, 150, 177);
-    color:rgb(1, 150, 177);
+    border: 0.1vw solid rgb(1, 150, 177);
+    color: rgb(1, 150, 177);
+}
+
+.formcom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.formcom button {
+    color: white;
+    text-decoration: none;
+    font-size: 0.7vw;
+    cursor: pointer;
+    background: rgb(1, 150, 177);
+    box-shadow: none;
+    font-family: 'PoetsenOne-Regular';
+    padding: 0.2vw 0.4vw;
+    border: 0.1vw solid rgb(1, 150, 177);
+    margin-top: 1vw;
+}
+
+.formcom button:hover {
+    background: white;
+    border: 0.1vw solid rgb(1, 150, 177);
+    color: rgb(1, 150, 177);
+}
+
+.formcom textarea {
+    resize: vertical;
+    width: 20vw;
+    max-height: 10vw;
+    margin-top: 1vw;
+}
+
+.comms {
+    display: flex;
+    flex-direction: column;
+}
+
+.comm {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: auto;
+    margin-top: 0.5vw;
+    margin-left: 1vw;
+}
+
+.comm strong {
+    color: black;
+}
+
+.comm span {
+    text-align: left;
+    width: 26vw;
+    word-wrap: break-word;
 }

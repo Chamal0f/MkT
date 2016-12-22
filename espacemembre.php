@@ -7,18 +7,13 @@
             <meta charset="utf-8" />
             <link rel="stylesheet" href="SiteMkT.css" />
             <title>Team MkT</title>
-         
         </head>
 
         <body onload="show_post()">
-          
-            
-         <?php include("header.php"); ?>
-         <?php include("footer.php"); ?>
-             
-          <?php if(isset($_SESSION['pseudo'])){ include("chat.php");} ?>
-        <?php include('filactualite.php'); ?>
-                  
+            <?php include("header.php"); ?>
+                <?php include("footer.php"); ?>
+                    <?php if(isset($_SESSION['pseudo'])){ include("chat.php");} ?>
+                        <?php include('filactualite.php'); ?>
         </body>
 
         </html>
