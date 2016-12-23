@@ -1,4 +1,5 @@
 <?php include('connexionbdd.php'); ?>
+    
     <form enctype="multipart/form-data">
         <input type="file" name="file1" id="file1" /> </form>
     <div id="blockactu">
@@ -82,22 +83,65 @@
             clearelement('entercom' + x);
         }
     </script>
-    <script language="javascript" type="text/javascript">
-        function show_com(x) {
-            var xhr = new XMLHttpRequest();
-            var url = "showcom.php";
-            var idpost = x;
-            var vars = "idpost=" + idpost;
-            xhr.open("POST", url, true);
-            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-                    console.log('OK');
-                    var return_data = xhr.responseText;
-                    var comments = document.getElementById("com" + x);
-                    comments.innerHTML = return_data;
+<script language="javascript" type="text/javascript">
+     /* show com   */ 
+    function show_com(x) {
+         var xhr = new XMLHttpRequest();
+        var url = "showcom.php";
+        var idpost = x;
+        var vars = "idpost=" + idpost;
+        xhr.open("POST", url, true);
+         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                console.log('OK');
+                var return_data = xhr.responseText;
+                var comments = document.getElementById("com" + x);
+                comments.innerHTML = return_data;
+                    
                 }
             }
             xhr.send(vars);
         }
-    </script>
+</script>
+
+<script language="javascript" type="text/javascript">
+    var update_com = setInterval(fakerealtimeajax,1000);    
+    
+    function fakerealtimeajax(){
+        
+        for(j=1;j<= i ; j++){
+        var elements = document.getElementsByName('nbpost'+j);    
+        var idpost = elements[0].getAttribute('id');
+        if(document.getElementById('commentpart'+ idpost).style.display=='block' )
+        {   
+        
+       
+        
+        var xhr = new XMLHttpRequest();
+        var url = "verif_com.php";
+        var vars = "idpost=" + idpost;
+        xhr.open("POST", url, false);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                console.log('OK'); 
+                var return_data = xhr.responseText;
+                var comments = document.getElementById("com" + idpost);
+                if(return_data){
+                comments.innerHTML = return_data  ;
+                }
+               
+            }
+        }
+        xhr.send(vars);
+            
+            
+        }
+            
+        }
+    }
+
+            
+    
+</script>

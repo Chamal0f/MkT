@@ -22,7 +22,7 @@ $a=0;
         $a++;
         $nbpost=$i+$a;
         $x=$file_exist['id'];
-        echo "<div class='postfilactu' id='".$x."'>";
+        echo "<div class='postfilactu' id='".$x."' name='nbpost".$nbpost."'>";
         
         if ($_SESSION['pseudo']==$file_exist['pseudo']){
         echo "<div class='modifsupp'> <button>modifier</button><button>suprimer</button> </div> ";
@@ -59,6 +59,7 @@ $a=0;
         
         
         echo "</div>";
+        
         
     }
 
