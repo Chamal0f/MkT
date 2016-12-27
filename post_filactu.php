@@ -3,11 +3,9 @@
         <?php 
 $i=$_POST["var"];
 
-$compteur = $bdd->prepare('SELECT COUNT(id) FROM fichier_upload');
-$compteur->execute();
-$array_post=$compteur->fetch();
-$compteur_post=$array_post[0];
-setcookie("compteur_post",$compteur_post);
+
+
+
 $file_filactu = $bdd->prepare('SELECT id,pseudo,message,new_name_file FROM fichier_upload ORDER BY date_upload DESC LIMIT '.$i.', 10');
 $file_filactu->execute();
 
@@ -22,8 +20,12 @@ $a=0;
         $a++;
         $nbpost=$i+$a;
         $x=$file_exist['id'];
-        echo "<div class='postfilactu' id='".$x."' name='nbpost".$nbpost."'>";
         
+        
+        
+        
+        echo "<div class='postfilactu' id='".$x."' name='nbpost".$nbpost."'>";
+    
         if ($_SESSION['pseudo']==$file_exist['pseudo']){
         echo "<div class='modifsupp'> <button>modifier</button><button>suprimer</button> </div> ";
         }
@@ -44,7 +46,7 @@ $a=0;
         echo "<audio controls src='upload/" .$file_exist["new_name_file"]."' ></audio> ";
         }
         
-        echo " <div class='likecomment'><button>Nice 1 ! </button> <span> ? likes </span> <button  onclick='javascript:showhidecom(".$x.");show_com(".$x.")'>commentaires</button> <span> ? commentaires </span></div> ";
+        echo " <div class='likecomment'><button>Nice 1 ! </button> <span id='nblikes'> ? likes </span> <button  onclick='javascript:showhidecom(".$x.");show_com(".$x.")'>commentaires</button> <span id='nbcom".$x."' >  </span></div> ";
         
         echo " <div id='commentpart".$x."' style='display:none'> 
         <div class='comms' id='com".$x."'>

@@ -9,7 +9,15 @@
             <title>Team MkT</title>
         </head>
 
-        <body onload="show_post()">
+        <body onload="show_post(); setTimeout(up_nb_com,100)">
+            <?php if(!isset($_SESSION['pseudo'])){
+    header('location: notconnected.php');
+}
+?>
+            
+            
+            
+            
             <?php include("header.php"); ?>
                 <?php include("footer.php"); ?>
                     <?php if(isset($_SESSION['pseudo'])){ include("chat.php");} ?>

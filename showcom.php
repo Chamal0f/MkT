@@ -14,24 +14,12 @@ $a=0;
 while($com_exist=$selectcom ->fetch()){
     $a++;
     $idcom=$com_exist["id"];
-    echo "<div class='comm' id='post".$idpost."com".$a."' > <span>
+    echo "<div class='comm' id='post".$idpost."com".$a."' name='".$idcom."' > <span>
     <strong>  ". $com_exist['pseudo']." : </strong> 
     ".$com_exist['commentaires']."
-    
-    
-    
-    
     </span>
-    </div>";
-    
-    
-    
-    
-    
-    setcookie("post".$idpost."com".$a,$idcom);
-    
-    
+    </div>";   
 }
-setcookie("post".$idpost,$count_com);
+
 
 ?>

@@ -19,9 +19,9 @@ body {
 #LogoMkT {
     left: 10vw;
     position: fixed;
-    bottom: 44.5vw;
+    top: 1vh;
     z-index: 11;
-    height: 4.55vw;
+    height: 9vh;
     width: 4.55;
 }
 
@@ -33,7 +33,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    height: 5vw;
+    height: 10vh;
     background: white;
     z-index: 10;
     width: 100vw;
@@ -64,7 +64,7 @@ nav a:active {
 #bouton {
     position: fixed;
     right: 2vw;
-    top: 1vw;
+    top: 2vh;
     display: inline-block;
     border: none;
     color: white;
@@ -90,14 +90,14 @@ nav a:active {
 #dropdown {
     position: fixed;
     right: 2vw;
-    top: 1vw;
+    top: 2vh;
     z-index: 11;
 }
 
 #dropdown #bouton1 {
     border: none;
     color: white;
-    padding: 0.5vw 1vw;
+    padding: 1vh 1vw;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -189,7 +189,7 @@ nav a:active {
     bottom: 0;
     right: 0;
     left: 0;
-    height: 5vw;
+    height: 10vh;
     background: white;
     z-index: 10;
 }
@@ -204,14 +204,14 @@ nav a:active {
 
 #jinx1 img {
     position: fixed;
-    bottom: 9%;
+    bottom: 9vh;
     left: 0;
     z-index: 11;
 }
 
 #jinx2 img {
     position: fixed;
-    top: 91%;
+    top: 91vh;
     left: 0;
     z-index: 11;
 }
@@ -337,8 +337,8 @@ form #pseudo {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 5%;
-    margin-bottom: 10%;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
 }
 
 #video div {
@@ -364,7 +364,7 @@ form #pseudo {
     font-family: 'PoetsenOne-Regular';
     font-size: 2em;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 20vh;
     color: white;
     text-shadow: 4px 4px 10px black;
 }
@@ -474,6 +474,16 @@ form #pseudo {
     text-shadow: 4px 4px 10px black;
 }
 
+/* not connected */ 
+
+#notconnected{
+    font-family: 'PoetsenOne-Regular';
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20%;
+    color: white;
+    text-shadow: 4px 4px 10px black;    
+}
 
 /*espacemembre*/
 
@@ -481,11 +491,11 @@ form #pseudo {
     display: flex;
     flex-direction: column;
     position: fixed;
-    bottom: 5.5vw;
-    top: 5.5vw;
+    bottom: 11vh;
+    top: 11vh;
     left: 31vw;
     border: 0.1vw solid black;
-    height: 38.3vw;
+    height: 78vh;
     z-index: 1;
     box-shadow: 0vw 0vw 10vw black;
     justify-content: center;
@@ -541,9 +551,9 @@ form #pseudo {
 
 #filactu {
     width: 31vw;
-    height: 31vw;
+    height: 62vh;
     background: rgb(230, 230, 230);
-    margin-top: 1vw;
+    margin-top: 2vh;
     margin-left: 3.6vw;
     display: flex;
     flex-direction: column;
@@ -556,7 +566,7 @@ form #pseudo {
     text-align: center;
     margin: 1vw;
     background: rgb(240, 240, 240);
-    padding-bottom: 1vw;
+    padding-bottom: 2vh;
     border: 0.11vw solid black;
 }
 

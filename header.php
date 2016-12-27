@@ -1,6 +1,10 @@
 <?php if($_SERVER['REQUEST_METHOD'] == 'POST' AND isset($_POST["deco"]) ){ if($_POST["deco"]=="deconnexion"){
 	$_SESSION = array();
-	session_destroy();}}?>
+	session_destroy();
+    if( $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'] === "localhost/MkT/espacemembre.php" /* a changer lors de la mise en ligne */ ){
+    header('location: notconnected.php');    
+    }
+}}?>
     <header>
         <nav>
             <ul>

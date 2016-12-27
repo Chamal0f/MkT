@@ -15,8 +15,8 @@
 	<?php include("header.php"); ?>
 	
 	
-	<p id="dejaconnecter">
-	Vous êtes déjà connecté !  
+	<p id="notconnected">
+	Vous devez être connecté pour acceder à cette page ! 
 	
 	
 	</p>
@@ -27,25 +27,15 @@
 	
 	<?php include("footer.php"); ?>
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	</body>
 </html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

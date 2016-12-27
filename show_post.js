@@ -20,4 +20,5 @@ function show_post() {
     xhr.send(vars);
     i = i + 10;
     x += 1;
+    
 }
