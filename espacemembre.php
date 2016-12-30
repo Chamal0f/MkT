@@ -9,7 +9,7 @@
             <title>Team MkT</title>
         </head>
 
-        <body onload="show_post(); setTimeout(up_nb_com,100)">
+        <body onload="show_post()">
             <?php if(!isset($_SESSION['pseudo'])){
     header('location: notconnected.php');
 }

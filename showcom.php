@@ -15,9 +15,8 @@ while($com_exist=$selectcom ->fetch()){
     $a++;
     $idcom=$com_exist["id"];
     echo "<div class='comm' id='post".$idpost."com".$a."' name='".$idcom."' > <span>
-    <strong>  ". $com_exist['pseudo']." : </strong> 
-    ".$com_exist['commentaires']."
-    </span>
+    <strong id='post".$idpost."com".$a."pseudo' >". $com_exist['pseudo']." : </strong> 
+    <span id='post".$idpost."com".$a."content'>".$com_exist['commentaires']."</span></span>
     </div>";   
 }
 

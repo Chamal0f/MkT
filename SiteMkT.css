@@ -575,14 +575,21 @@ form #pseudo {
     color: rgb(1, 150, 177);
 }
 
+.msg_post{
+    margin-bottom: 2vh;
+}
+
 .postfilactu img {
     width: 27vw;
     margin: auto;
+    cursor: pointer;
+    
 }
 
 .postfilactu video {
     width: 27vw;
     margin: auto;
+    cursor: pointer;
 }
 
 .postfilactu audio {
@@ -626,6 +633,12 @@ form #pseudo {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    
+}
+.btnmodifsupp {
+    display: flex;
+    flex-direction: row;
+    
 }
 
 .modifsupp button {
@@ -638,14 +651,44 @@ form #pseudo {
     font-family: 'PoetsenOne-Regular';
     padding: 0.2vw 0.4vw;
     border: 0.1vw solid rgb(1, 150, 177);
+    
 }
 
 .modifsupp button:hover {
     background: white;
     border: 0.1vw solid rgb(1, 150, 177);
     color: rgb(1, 150, 177);
+    
 }
 
+
+.drop2content{
+    display: none;
+    flex-direction: row;
+    overflow: visible;
+    align-items: center;
+    
+    margin-left:1vw; 
+    
+}
+.drop2content button {
+margin-left: 1vw;
+}
+.drop1content{
+    display: none;
+    flex-direction: row;
+    overflow: visible;
+    align-items: center;
+    overflow: visible;
+    margin-left:1vw; 
+    
+}
+.drop1content input{
+    resize: vertical;
+    height: 2vh;
+    width: 14vw;
+    
+}
 .formcom {
     display: flex;
     flex-direction: row;
@@ -693,6 +736,7 @@ form #pseudo {
     margin-left: 1vw;
 }
 
+
 .comm strong {
     color: black;
 }
@@ -702,3 +746,4 @@ form #pseudo {
     width: 26vw;
     word-wrap: break-word;
 }
+

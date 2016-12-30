@@ -1,16 +1,8 @@
- <?php for(j=1;j <= result ; j++){
-                    
-                var elements = document.getElementsByName('nbpost'+j);    
-                var idpost = elements[0].getAttribute('id');   
-                var btn = document.getElementById("btnlike"+idpost);
-                btn.innerHTML = return_data;
-                }
-
-
-
-
-
-
+<?php include('connexionbdd.php');?>
+    <?php session_start(); ?>
+<?php
+$pseudo = $_SESSION["pseudo"];
+$idpost = $_POST["idpost"];
 
 $count = $bdd -> prepare("SELECT COUNT(id) FROM likes WHERE id_fichier = ".$idpost." AND pseudo = '".$pseudo."' ");
 $count -> execute();
@@ -30,4 +22,12 @@ if( $like_exist == 0){
     echo "Nice 1 !";
     
 }
+
+
+
+
+
+
+
+
 ?>
