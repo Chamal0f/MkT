@@ -229,7 +229,7 @@ var update_com = setInterval(update_com,1000);
                         var comments = document.getElementById("com" + return_data[j-1][0]);
                         comments.innerHTML = "";
                         for(a=1;a <= return_data[j-1][1];a++ ){
-                             comments.innerHTML += "<div class='comm' id='post" + return_data[j-1][0] + "com" + a + "' name='" + return_data[j-1][0] + "' > <span><strong>  " + return_data[j-1][2][a-1][1] + " : </strong> " + return_data[j-1][2][a-1][2] + "</span></div>";
+                             comments.innerHTML += "<div class='commentsuppr' > <div class='comm' id='post" + return_data[j-1][0] + "com" + a + "' name='" + return_data[j-1][0] + "' > <span><strong>  " + return_data[j-1][2][a-1][1] + " : </strong> " + return_data[j-1][2][a-1][2] + "</span></div><div class='btnsuppr'> <img src='pics/btnsuppr.png'/> </div></div> ";
                         }
                     }else{
                         for(b=1;b <= return_data[j-1][1];b++ ){
@@ -237,7 +237,7 @@ var update_com = setInterval(update_com,1000);
                                 var comments = document.getElementById("com" + return_data[j-1][0]);
                         comments.innerHTML = "";
                             for(a=1;a <= return_data[j-1][1];a++ ){
-                             comments.innerHTML += "<div class='comm' id='post" + return_data[j-1][0] + "com" + a + "' name='" + return_data[j-1][0] + "' > <span><strong>  " + return_data[j-1][2][a-1][1] + " : </strong> " + return_data[j-1][2][a-1][2] + "</span></div>";
+                             comments.innerHTML += " <div class='commentsuppr' ><div class='comm' id='post" + return_data[j-1][0] + "com" + a + "' name='" + return_data[j-1][0] + "' > <span><strong>  " + return_data[j-1][2][a-1][1] + " : </strong> " + return_data[j-1][2][a-1][2] + "</span></div> <div class='btnsuppr'> <img src='pics/btnsuppr.png'/> </div></div>";
                             
                                 }
                             break;
@@ -441,4 +441,24 @@ var update_com = setInterval(update_com,1000);
         xhr.send(vars);
     }
 </script>
+<script language="javascript" type="text/javascript">
+    function show_btn_suppr_com(idpost,a){
+        var innerstrong = document.getElementById("post"+idpost+"com"+a+"pseudo").innerHTML;
+        var pseudo = innerstrong.substring(0,innerstrong.length - 3 );
+        var pseudosess = "<?php echo $_SESSION['pseudo']; ?>" ; 
+        
+        
+        if(pseudo == pseudosess){
+        document.getElementById("btnsuppr"+idpost+a).style.display = 'flex';
+        document.getElementById("comment"+idpost+a).style.backgroundColor = "rgb(230,230,230)";
+        }
+        
+    }
+    
+    function hide_btn_suppr_com(idpost,a){
+        document.getElementById("btnsuppr"+idpost+a).style.display = 'none';
+         document.getElementById("comment"+idpost+a).style.backgroundColor = "rgb(240,240,240)";
+    }
+    </script>
+
 

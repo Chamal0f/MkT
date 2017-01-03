@@ -14,10 +14,16 @@ $a=0;
 while($com_exist=$selectcom ->fetch()){
     $a++;
     $idcom=$com_exist["id"];
-    echo "<div class='comm' id='post".$idpost."com".$a."' name='".$idcom."' > <span>
-    <strong id='post".$idpost."com".$a."pseudo' >". $com_exist['pseudo']." : </strong> 
-    <span id='post".$idpost."com".$a."content'>".$com_exist['commentaires']."</span></span>
-    </div>";   
+    echo "<div class='commentsuppr' id='comment".$idpost.$a."' onmouseover='javascript:show_btn_suppr_com(".$idpost.
+        ",".$a.");'  onmouseout='javascript:hide_btn_suppr_com(".$idpost.
+        ",".$a.");'  >
+    <div class='comm' id='post".$idpost."com".$a."' name='".$idcom."' > <span>
+    <strong id='post".$idpost."com".$a."pseudo' >". $com_exist['pseudo']." : </strong> <span id='post".$idpost."com".$a."content'>".$com_exist['commentaires']."</span></span></div>
+    <div class='btnsuppr' id='btnsuppr".$idpost.$a."'> <img src='pics/btnsuppr.png'/> </div>
+    
+    </div>
+    "
+        ;   
 }
 
 

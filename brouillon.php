@@ -31,3 +31,5 @@ if( $like_exist == 0){
     
 }
 ?>
+
+ <div class='drop2content' id='drop2content".$x."'> Certain ? <button>Yes</button> </div>

@@ -725,6 +725,7 @@ margin-left: 1vw;
 .comms {
     display: flex;
     flex-direction: column;
+    
 }
 
 .comm {
@@ -732,8 +733,9 @@ margin-left: 1vw;
     flex-direction: row;
     justify-content: flex-start;
     overflow: auto;
-    margin-top: 0.5vw;
+    
     margin-left: 1vw;
+    align-items: center;
 }
 
 
@@ -743,7 +745,24 @@ margin-left: 1vw;
 
 .comm span {
     text-align: left;
-    width: 26vw;
+    width: 25vw;
     word-wrap: break-word;
 }
-
+.btnsuppr{
+    display: none;
+}
+.btnsuppr img{
+    height: 2vh;
+    width: 1vw;
+    
+    
+    
+}
+.commentsuppr{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    
+}
